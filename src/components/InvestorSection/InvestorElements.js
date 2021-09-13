@@ -1,17 +1,20 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import investorBg from '../../images/investor-bg.png'
 
 
-export const InvestorContainer = styled.div`
+export const InvestorContainer = styled.section`
+    /* height: 800px; */
+    min-height: 100vh;
+    scroll-snap-align: start;
     background: url(${investorBg});
     color: #fff;
-    /* height: 800px; */
     display: block;
     margin: auto;
-    padding: 80px 200px;
+    padding: 100px 200px;
 
     @media screen and (max-width: 768px){
         padding: 50px;
+        min-height: unset;
     }
 `;
 
@@ -75,4 +78,8 @@ export const LineImg = styled.img`
     height: 20px;
     margin: auto;
     display: revert;
+`;
+
+export const AreaFloaters = styled.area`
+
 `;

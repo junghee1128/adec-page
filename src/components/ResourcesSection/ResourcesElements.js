@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import resourcesBg from '../../images/resources-bg.png'
 
 
-export const ResourcesContainer = styled.div`
+export const ResourcesContainer = styled.section`
+    /* height: 800px; */
+    min-height: 100vh;
+    scroll-snap-align: start;
     background: url(${resourcesBg}) no-repeat center;
     background-color: #e6e6e6;
     color: #fff;
     display: block;
     margin: auto;
-    padding: 80px 200px;
-    height: 800px;
+    padding: 100px 200px;
     
     @media screen and (max-width: 1245px){
         padding: 50px 0px;
@@ -17,6 +19,7 @@ export const ResourcesContainer = styled.div`
 
     @media screen and (max-width: 768px){
         padding: 50px 0px;
+        min-height: unset;
     }
 `;
 

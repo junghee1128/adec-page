@@ -1,17 +1,20 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import aboutBg from '../../images/about-bg.png'
 
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.section`
+    /* height: 800px; */
+    min-height: 100vh;
+    scroll-snap-align: start;
     background: url(${aboutBg});
     color: #fff;
-    /* height: 800px; */
     display: block;
     margin: auto;
-    padding: 80px 200px;
+    padding: 100px 200px;
 
     @media screen and (max-width: 768px){
         padding: 50px;
+        min-height: unset;
     }
 `;
 
@@ -96,6 +99,11 @@ export const SectionIcons = styled.div`
 
     &#blank {
         background: transparent;
+    }
+    &:hover {
+        background: #4f7d9b;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
     }
 
     @media screen and (max-width: 768px){

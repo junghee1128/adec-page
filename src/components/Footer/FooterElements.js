@@ -1,9 +1,8 @@
-import styled from "styled-components";
-import footerBg from '../../images/footer-bg.png'
+import styled from "styled-components"
 import {Link as Link_Router} from 'react-router-dom'
 
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
     background-color: #333333;
     color: #fff;
     display: block;
@@ -14,20 +13,7 @@ export const FooterContainer = styled.div`
     }
 `;
 
-export const ContactWrapper = styled.div`
-    background: url(${footerBg}) center;
-    padding: 80px 0px 0px;
-    min-height: 500px;
-    display: grid;
-    
-    @media screen and (max-width: 320px){
-    }
-
-    @media screen and (max-width: 480px){
-    }
-`;
-
-export const ContactFooter = styled.div`
+export const FooterWrapper = styled.div`
     display: grid;
     padding: 20px 150px;
     /* justify-content: center;
@@ -60,29 +46,31 @@ export const NavLogoImg = styled.img`
     }
 `;
 
-export const SectionWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    align-content: center;
-    justify-content: center;
+export const SocialFloaters = styled.div`
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    width: 200px;
+    line-height: 2;
+    color: #0d507b;
+    z-index: 999;
+    font-size: 25px;
+    
+    @media screen and (max-width: 320px){
+    }
 
-    @media screen and (max-width: 768px){
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+    @media screen and (max-width: 480px){
     }
 `;
 
-export const SectionLabel = styled.h1`
-    text-transform: uppercase;
-    padding: 20px 0px;
-    color: #fff;
-`;
+export const SocialFloatersLink = styled.div`
+    cursor: pointer;
+    
+    @media screen and (max-width: 320px){
+    }
 
-export const LineImg = styled.img`
-    width: 10px;
-    height: 20px;
-    margin: auto;
-    display: revert;
+    @media screen and (max-width: 480px){
+    }
 `;

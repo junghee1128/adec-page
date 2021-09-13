@@ -1,38 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Line from '../../images/line.png'
 import Logo from '../../images/logo-transparent.png'
 import * as FontAwesomeIcon from 'react-icons/fa'
 import {
-    SectionWrapper,
-    SectionLabel,
-    LineImg,
     FooterContainer,
-    ContactWrapper,
+    FooterWrapper,
     NavLogo,
     NavLogoImg,
-    ContactFooter
+    SocialFloaters,
+    SocialFloatersLink
 } from './FooterElements'
 
-const FooterSection = () => {
+const FooterSection = ({floatersBg}) => {
     return (
         <>
         <FooterContainer>
 
-            <ContactWrapper>
-                <SectionWrapper>
-                    <SectionLabel><LineImg src={Line} /> Contact Us <LineImg src={Line} /></SectionLabel>
-                </SectionWrapper>
+            <SocialFloaters style={{color:floatersBg?"#5bb7dc":"#0d507b"}}>
+                <SocialFloatersLink><FontAwesomeIcon.FaFacebookF /></SocialFloatersLink>
+                <SocialFloatersLink><FontAwesomeIcon.FaTwitter /></SocialFloatersLink>
+                <SocialFloatersLink><FontAwesomeIcon.FaLinkedin /></SocialFloatersLink>
+                <SocialFloatersLink><FontAwesomeIcon.FaInstagram /></SocialFloatersLink>
+            </SocialFloaters>
 
-                <SectionWrapper>
-                </SectionWrapper>
-            </ContactWrapper>
-
-            {/* <ContactWrapper>
-            </ContactWrapper> */}
-
-            <ContactFooter>
+            <FooterWrapper>
                 <NavLogo to="/"><NavLogoImg src={Logo} /></NavLogo>
-            </ContactFooter>
+            </FooterWrapper>
 
         </FooterContainer>
         </>

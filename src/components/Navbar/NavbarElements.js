@@ -66,14 +66,31 @@ export const MobileIcon = styled.div`
     }
 `;
 
-export const Topbar = styled.div`
-    z-index: 999;
-    position: absolute;
+export const Topbar = styled.header`
+    display: grid;
+    /* display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
     top: 0;
+    z-index: 99;
+    position: absolute;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center; */
 
     @media screen and (max-width: 768px) {
         display: none;
     }
+`;
+
+export const TopbarMenu = styled.div`
+    display: flex;
+    padding: 0px;
+    max-height: 29px;
+    line-height: 2;
+    font-size: small;
+    justify-content: space-evenly;
+    text-decoration: none;
 `;
 
 export const TopbarItem = styled.div`
@@ -83,7 +100,7 @@ export const TopbarItem = styled.div`
 `;
 
 export const TopbarLinks = styled(Link_Scroll)`
-    color: #0d507b;
+    /* color: #0d507b;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -91,12 +108,16 @@ export const TopbarLinks = styled(Link_Scroll)`
     text-transform: uppercase;
     padding: 0 2rem;
     height: 100%;
-    cursor: pointer;
+    cursor: pointer; */
 
     &:hover, &:active {
         color: #29ade0;
         font-weight: unset;
     }
+`;
+
+export const Search = styled.input`
+
 `;
 
 export const NavMenu = styled.ul`

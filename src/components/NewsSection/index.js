@@ -10,6 +10,7 @@ import {
     NewsWrapper,
     NewsRow,
     NewsTitle,
+    NewsTags,
     NewsDate,
     NewsDescription
 } from './NewsElements'
@@ -35,6 +36,7 @@ const NewsSection = (props) => {
             <NewsWrapper>
                 {content.map((item, index) => (
                     <NewsRow>
+                        <NewsTags>{item.tags}</NewsTags>
                         <NewsTitle>{item.title}</NewsTitle>
                         <NewsDate>{item.date}</NewsDate>
                         <NewsDescription>{item.description}</NewsDescription>

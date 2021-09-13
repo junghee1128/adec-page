@@ -4,11 +4,12 @@ import {Link} from 'react-scroll'
 export const Button = styled(Link)`
     transition: all 0.2 ease-in-out;
     text-transform: uppercase;
-    background: #29ade0;
+    background: ${({ dark }) => (dark ? '#14587d':'#29ade0')};
+    /* background: #29ade0; */
     color: #fff;
     white-space: nowrap;
-    line-height: 10;
-    position: relative;
+    line-height: 5;
+    /* position: relative; */
     padding: 15px;
     margin: auto;
     width: 250px;
@@ -31,16 +32,25 @@ export const Button = styled(Link)`
 
     &:hover{
         transition: all 0.2 ease-in-out;
-        background: #14587d;
+        background: ${({ dark }) => (dark ? '#4f7d9b':'#14587d')};
+        /* background: #14587d; */
+    }
+
+    @media screen and (max-width: 320px){
+        line-height: 5 !important;
+    }
+
+    @media screen and (max-width: 480px){
+        line-height: 5 !important;
     }
 
     @media screen and (max-width: 768px){
-        line-height: unset;
+        /* line-height: unset; */
         left: unset;
     }
 
     @media screen and (max-width: 959px){
-        line-height: unset;
+        /* line-height: unset; */
         left: unset;
         top: 50px;
     }

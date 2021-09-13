@@ -1,19 +1,26 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import newsBg from '../../images/news-bg.png'
 import news1 from '../../images/news-1.png'
 import news2 from '../../images/news-2.png'
 
 
-export const NewsContainer = styled.div`
+export const NewsContainer = styled.section`
+    /* height: 800px; */
+    min-height: 100vh;
+    scroll-snap-align: start;
     background: url(${newsBg}) center;
     background-color: #e6e6e6;
     color: #fff;
     display: block;
     margin: auto;
-    padding: 80px 0px 0px;
+    padding: 100px 0px 0px;
 
     @media screen and (max-width: 480px){
         padding: 50px 0px 0px;
+    }
+
+    @media screen and (max-width: 768px){
+        min-height: unset;
     }
 `;
 
@@ -69,23 +76,52 @@ export const NewsRow = styled.div`
     }
 `;
 
+export const NewsTags = styled.div`
+    text-transform: uppercase;
+    background: #f79c39;
+    width: fit-content;
+    padding: 5px;
+    margin: 50px 0 20px;
+    
+    @media screen and (max-width: 320px){
+    }
+
+    @media screen and (max-width: 480px){
+    }
+
+    @media screen and (max-width: 768px){
+    }
+`;
+
 export const NewsTitle = styled.h1`
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 18px;
     color: #fff;
-    margin-top: 50px;
+    height: 70px;
+    
+    @media screen and (max-width: 320px){
+        height: unset !important;
+    }
+
+    @media screen and (max-width: 480px){
+        height: unset !important;
+    }
+
+    @media screen and (max-width: 768px){
+        height: 70px;
+    }
 `;
 
 export const NewsDate = styled.p`
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 18px;
     color: #29ade0;
     margin-top: 50px;
 `;
 
 export const NewsDescription = styled.p`
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 15px;
     color: #e2eaee;
     margin-top: 20px;
 `;

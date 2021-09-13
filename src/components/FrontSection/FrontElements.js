@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import {FaPlayCircle, FaPauseCircle} from 'react-icons/fa'
 
 
-export const FrontContainer = styled.div`
+export const FrontContainer = styled.section`
+    /* height: 800px; */
+    min-height: 100vh;
+    scroll-snap-align: start;
     background: #0d507b;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 30px;
     margin-top: -100px;
-    height: 800px;
     position: relative;
     z-index: 1;
 `;

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import Video from '../../images/video.mp4'
+import Video from '../../images/video.mov'
 import OverlayImg from '../../images/front.png'
 import { Button } from '../ButtonElements'
 import {
@@ -39,14 +39,14 @@ const FrontSection = ({ id, phrase }) => {
 
     return (
         <FrontContainer id={id}>
-            <FrontOverlayImg src={OverlayImg} type='img/png' />
+            <FrontOverlayImg className={isPlaying ? 'vid-playing-content hidden' : ''} src={OverlayImg} type='img/png' />
 
             <FrontBg>
-                <FrontOverlay />
-                <VideoBg loop muted src={Video} ref={vidRef} type='video/mp4' />
+                <FrontOverlay className={isPlaying ? 'vid-playing-overlay' : ''} />
+                <VideoBg loop muted src={Video} ref={vidRef} type='video/mov' onClick={togglePlay} />
             </FrontBg>
 
-            <FrontContent>
+            <FrontContent className={isPlaying ? 'vid-playing-content hidden' : ''}>
                 <FrontHeader>Strategic Consulting</FrontHeader>
                 <FrontHeader>For a Digital World</FrontHeader>
                 <FrontPhrase>
