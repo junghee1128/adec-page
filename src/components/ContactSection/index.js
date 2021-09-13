@@ -27,7 +27,7 @@ const ContactSection = ({ id }) => {
 
             <ContactWrapper>
                 <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyBwNGj8b3-NCUY0MA8qNFm5wmZKTANrt8E' }}
+                    bootstrapURLKeys={{ key: process.env.GMAP_API_KEY }}
                     options = {{
                         styles: Mapstyles.dark
                     }}
